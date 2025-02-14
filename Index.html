@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Resume Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Build Your IT Resume</h1>
+      <form id="resumeForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Your Full Name" required>
+
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" placeholder="Your Job Title" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+        <label for="skills">Skills (comma separated)</label>
+        <input type="text" id="skills" placeholder="Skill 1, Skill 2, Skill 3" required>
+
+        <label for="experience">Experience</label>
+        <textarea id="experience" placeholder="Describe your professional experience" required></textarea>
+
+        <label for="education">Education</label>
+        <input type="text" id="education" placeholder="Your Degree/Institution" required>
+
+        <button type="button" id="generateResume">Generate Resume</button>
+      </form>
+    </div>
+
+    <div class="resume-container" id="resumeOutput" style="display: none;">
+      <h1>Preview Your Resume</h1>
+      <div id="resumeContent"></div>
+      <button onclick="downloadResume()" id="downloadBtn">Download Resume</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
